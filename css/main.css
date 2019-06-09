@@ -1,0 +1,32 @@
+.algorithm-detail
+{
+  width: 100%;
+  background: lightgrey;
+  border: 5px solid;
+  float: left;
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+
+.algorithm-result 
+{
+  width: 100%;
+  background: lightsalmon;
+  border: 5px solid;
+  float: right;
+  border-style: outset;
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+
+.algorithm-information 
+{
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid;
+  margin: auto;
+}
