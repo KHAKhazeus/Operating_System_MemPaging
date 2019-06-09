@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Paging</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+  
+  <div class="container">
+
+
+    <div id="main">
+
+      <!-- /.algorithm-input -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="algorithm-detail">
+            <br/>
+            <h4>Parameters<br>
+            <span class="badge badge-pill badge-primary">Total Memory Blocks:</span> <span id="numberOfTotalMemoryBlocks" style="color: black; margin-right: 10px">4</span>
+            <span class="badge badge-pill badge-primary">Total Instructions:</span> <span id="numberOfTotalInstructions" style="color: black; margin-right: 10px">320</span>
+            <span class="badge badge-pill badge-primary">Instructions Per Page:</span><span id="numberOfInstructionsInEachPage" style="color: black;">10</span>
+            </h4>
+            <br/>
+
+          </div>
+        </div>
+        <!-- /algorithm-detail -->
+
+      </div>
+      
+      <br>
+        <div class="container">
+        <div class="algorithm">
+        
+          <div class="custom-control custom-radio">
+            <input type="radio" id="FIFORatio" name="customRadio" class="custom-control-input" value="FIFO" checked>
+            <label class="custom-control-label" for="FIFORatio">FIFO</label>
+          </div>
+      
+          <div class="custom-control custom-radio">
+            <input type="radio" id="LRURatio" name="customRadio" class="custom-control-input" value="LRU">
+            <label class="custom-control-label" for="LRURatio">LRU</label>
+          </div>
+  
+
+        </div>
+        <div class="btn-group btn-group-lg" role="group" aria-label="..." style="margin-bottom: 10px">
+          <button type="button" class="btn btn-secondary" id="next">One Instruction</button>
+          <button type="button" class="btn btn-secondary" id="startBtn">Consecutive</button>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-md-12">
+          <div class="algorithm-result">
+            <br>
+            <h4>Simulation Result</h4>
+            <br>
+
+            <p>Current Instruction: <span id="currentInstruction" style="color: black;"><b>-1</b></span></p>
+            <p>Page Faults: <span id="numberOfMissingPages" style="color: black;"><b>-1</b></span></p>
+            <p>Page Fault Rate: <span id="pageFaultRate" style="color: red;"><b>NULL</b></span></p>
+            <br>
+
+          </div>
+        </div>
+      </div>
+      <br>  
+      
+      
+      <div class="algorithm-information">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">Simulation Details</li>
+            </ol>
+          </nav>
+
+        <div class="row">
+        <div class="col-md-4">
+            <div id="my-shuffle">
+              </div>
+        </div>
+        <div class="col-md-8">
+          <div style="height:500px; overflow-y:scroll; overflow-x:none;">
+            <table class="table table-hover" id="memoryTable" height="300px">
+              <thead>
+                <tr>
+                  <th scope="col">Instruction</th>
+                  <th scope="col">Block 1</th>
+                  <th scope="col">Block 2</th>
+                  <th scope="col">Block 3</th>
+                  <th scope="col">Block 4</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+
+          <br>
+       
+
+        </div>
+      </div>
+      </div>
+
+      <br>
+    
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.2/shuffle.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
